@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -19,13 +19,19 @@ module.exports = {
         "floralWhite": "#FEFAF0",
         "lightSilver": "#D9D9D9",
         "metallicSilver": "#ABA7AF",
+        "testing": "#98eb34",
       },
       fontFamily: {
+        "PoppinsLight": ["PoppinsLight", "Arial", "sans-serif"],
       },
       backgroundImage: {
-        'home-banner-desktop': "url('@/assets/desktop-banner.webp')",
+        'homeBannerDesktop': "url('@/assets/desktop-banner.webp')",
       },
     },
   },
   plugins: [],
-};
+}
+
+
+
+
