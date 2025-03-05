@@ -16,16 +16,14 @@ module.exports = {
         "desktop-xl": "1710px",
       },  
       colors: {
-        "floralWhite": "#FEFAF0",
         "lightSilver": "#D9D9D9",
-        "metallicSilver": "#ABA7AF",
-        "testing": "#98eb34",
       },
       fontFamily: {
         "PoppinsLight": ["PoppinsLight", "Arial", "sans-serif"],
       },
       backgroundImage: {
-        'homeBannerDesktop': "url('@/assets/desktop-banner.webp')",
+        'homeBannerDesktop': "url('/assets/desktop-banner.webp')",
+        'sosmedBackground': "url('/assets/sosmed-bg.svg')",
       },
     },
   },
