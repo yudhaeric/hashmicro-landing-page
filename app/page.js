@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Header from "@/components/partials/Header";
 
 export default function Home() {
   const imagePath = "/assets/image-";
@@ -48,29 +49,29 @@ export default function Home() {
   return (
     <div className="bg-lightSilver">
       <section id="banner">
-        <div className="relative flex flex-col justify-center items-center gap-4 w-full h-[300px] bg-homeBannerDesktop bg-no-repeat bg-cover bg-center">
-          <img src="/assets/logo-hashmicro-white.webp" alt="" className="w-[300px]"/>
-          <div className="flex items-center justify-center gap-[20px] relative">
+        <div className="relative flex flex-col justify-center items-center gap-4 w-full h-[300px] bg-homeBannerDesktop bg-no-repeat bg-cover bg-center lg:h-[400px]">
+          <img src="/assets/logo-hashmicro-white.webp" alt="" className="w-[300px] lg:w-[500px]"/>
+          <div className="flex items-center justify-center gap-[20px] relative lg:gap-[30px]">
             {socialMedia.map((item, index) => (
               <div key={item.id} className="relative flex items-center">
                 {index !== socialMedia.length - 1 && (
-                  <div className="absolute top-1/2 left-full w-[20px] h-[2px] bg-white -translate-y-1/2"></div>
+                  <div className="absolute top-1/2 left-full w-[20px] h-[2px] bg-white -translate-y-1/2 lg:w-[30px]"></div>
                 )}
                 <a 
                   href={item.url} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="group relative flex items-center justify-center rounded-full bg-transparent transition-all duration-300 w-8 h-8"
+                  className="group relative flex items-center justify-center rounded-full bg-transparent transition-all duration-300 w-8 h-8 lg:w-12 lg:h-12"
                 >
                   <img 
                     src={item.iconWhite} 
                     alt="social icon" 
-                    className="absolute w-8 h-8 lg:w-10 lg:h-10 transition-opacity duration-300 group-hover:opacity-0"
+                    className="absolute w-8 h-8 lg:w-12 lg:h-12 transition-opacity duration-300 lg:group-hover:opacity-0"
                   />
                   <img 
                     src={item.iconBlack} 
                     alt="social icon" 
-                    className="absolute w-8 h-8 lg:w-10 lg:h-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    className="absolute w-8 h-8 lg:w-12 lg:h-12 opacity-0 transition-opacity duration-300 lg:group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -79,11 +80,15 @@ export default function Home() {
         </div>
       </section>
 
+      <header>
+        <Header/>
+      </header>
+
       <section id="article">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-[90%] mx-auto mt-5 pb-16 lg:w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-[90%] mx-auto mt-2 pb-16 lg:w-full lg:pb-72 2xl:max-w-[1200px]">
           {articles.map((article) => (
-            <div key={article.id} className="relative w-full h-64 rounded-[6px] overflow-hidden shadow-lg lg:rounded-none">
-              <img src={article.image} alt={article.title} className="w-full h-full object-cover lg:object-contain lg:h-[500px]" />
+            <div key={article.id} className="relative w-full h-64 rounded-[6px] overflow-hidden shadow-lg lg:rounded-none lg:h-[340px]">
+              <img src={article.image} alt={article.title} className="w-full h-full object-cover lg:h-[340px]" />
               <div className="absolute flex items-end justify-center inset-0 bg-black bg-opacity-10 pb-4">
                 <div className="w-[85%] border-4 border-black p-1">
                   <div className="text-center text-white bg-black py-5">
